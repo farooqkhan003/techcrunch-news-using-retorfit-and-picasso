@@ -1,4 +1,4 @@
-package com.example.hp.newsapp;
+package com.example.hp.newsapp.Utilities;
 
 import android.content.Context;
 import android.util.AttributeSet;

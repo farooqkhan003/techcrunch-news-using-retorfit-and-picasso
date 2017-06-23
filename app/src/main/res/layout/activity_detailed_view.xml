@@ -8,7 +8,7 @@
     android:paddingLeft="8dp"
     android:paddingRight="8dp"
     android:paddingTop="8dp"
-    tools:context="com.example.hp.newsapp.DetailedView">
+    tools:context="com.example.hp.newsapp.Activities.DetailedView">
 
     <ScrollView
         android:layout_width="match_parent"

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.SplashScreen"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,11 +20,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home" />
+        <activity android:name=".Activities.Home" />
         <activity
-            android:name=".DetailedView"
-            android:parentActivityName=".Home" />
-        <activity android:name=".CompleteArticle"></activity>
+            android:name=".Activities.DetailedView"
+            android:parentActivityName=".Activities.Home" />
+        <activity
+            android:name=".Activities.CompleteArticle"
+            android:parentActivityName=".Activities.DetailedView"></activity>
     </application>
 
 </manifest>

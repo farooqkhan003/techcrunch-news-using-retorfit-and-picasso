@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
 
-    <com.example.hp.newsapp.SquareImageView
+    <com.example.hp.newsapp.Utilities.SquareImageView
         android:id="@+id/grid_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

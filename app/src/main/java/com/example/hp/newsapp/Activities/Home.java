@@ -1,4 +1,4 @@
-package com.example.hp.newsapp;
+package com.example.hp.newsapp.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +10,11 @@ import android.widget.GridView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.hp.newsapp.Models.Data;
+import com.example.hp.newsapp.Models.News;
+import com.example.hp.newsapp.Adapters.NewsAdapter;
+import com.example.hp.newsapp.Interfaces.NewsApiInterface;
+import com.example.hp.newsapp.R;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -17,6 +22,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -36,6 +42,7 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        ButterKnife.bind(this);
 
         loadNews = new LoadNews();
         loadNews.starts();

@@ -1,4 +1,4 @@
-package com.example.hp.newsapp;
+package com.example.hp.newsapp.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
@@ -10,11 +10,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.hp.newsapp.Models.News;
+import com.example.hp.newsapp.R;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class DetailedView extends AppCompatActivity {
     private Toolbar toolbar;
@@ -30,6 +32,7 @@ public class DetailedView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed_view);
+        ButterKnife.bind(this);
 
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);

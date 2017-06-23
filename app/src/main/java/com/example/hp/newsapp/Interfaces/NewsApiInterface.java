@@ -1,6 +1,6 @@
-package com.example.hp.newsapp;
+package com.example.hp.newsapp.Interfaces;
 
-import java.util.List;
+import com.example.hp.newsapp.Models.Data;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

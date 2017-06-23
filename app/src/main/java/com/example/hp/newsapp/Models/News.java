@@ -1,4 +1,4 @@
-package com.example.hp.newsapp;
+package com.example.hp.newsapp.Models;
 
 import java.io.Serializable;
 
