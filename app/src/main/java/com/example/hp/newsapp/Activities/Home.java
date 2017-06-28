@@ -115,7 +115,7 @@ public class Home extends AppCompatActivity {
             } else {
                 Log.e("Retrofit call", "other larger issue, i.e. no network connection?");
             }
-            Toast.makeText(Home.this, "Call failure", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Home.this, "Network error.", Toast.LENGTH_SHORT).show();
         }
 
         public void cancel(){
