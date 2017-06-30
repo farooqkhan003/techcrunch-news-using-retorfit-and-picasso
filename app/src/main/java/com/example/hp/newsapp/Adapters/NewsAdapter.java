@@ -14,18 +14,25 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by hp on 6/20/2017.
  */
 
 public class NewsAdapter extends BaseAdapter {
+    @BindView(R.id.grid_title)
+    TextView _textView;
+    @BindView(R.id.grid_image)
+    ImageView _imageView;
+
     private Context context;
     private ArrayList<News> data;
 
     public NewsAdapter(Context context, ArrayList<News> data) {
         this.context = context;
         this.data = data;
-
     }
 
     @Override
@@ -52,10 +59,10 @@ public class NewsAdapter extends BaseAdapter {
 
             grid = new View(context);
             grid = inflater.inflate(R.layout.grid_item, null);
-            TextView textView = (TextView) grid.findViewById(R.id.grid_title);
-            ImageView imageView = (ImageView) grid.findViewById(R.id.grid_image);
-            textView.setText(data.get(position).getTitle());
-            Picasso.with(context).load(data.get(position).getUrlToImage()).placeholder(R.drawable.news).into(imageView);
+            ButterKnife.bind(this, grid);
+
+            _textView.setText(data.get(position).getTitle());
+            Picasso.with(context).load(data.get(position).getUrlToImage()).placeholder(R.drawable.news).into(_imageView);
 
         } else {
             grid = (View) convertView;
@@ -64,7 +71,7 @@ public class NewsAdapter extends BaseAdapter {
         return grid;
     }
 
-    public void setData(ArrayList<News>data){
+    public void setData(ArrayList<News> data) {
         this.data = data;
     }
 }
